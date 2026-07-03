@@ -1,27 +1,35 @@
 import { motion } from "framer-motion";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
     title: "Mobile Shop Management System",
     description:
-      "Developed a Mobile Shop Management System with authentication, product management, Add to Cart, Buy Now, and Payment features.",
+      "Developed a Mobile Shop Management System using React JS with user authentication, product management, Add to Cart, Buy Now, and Payment Processing functionalities.",
     tech: ["React", "JavaScript", "HTML", "CSS"],
-    github: "YOUR_GITHUB_LINK",
+    github:
+      "https://github.com/priyadharshinim617-maker/Mobile-Shop-Management-System",
+    demo: "#",
   },
+
   {
     title: "AI Powered Resume Analyzer",
     description:
-      "Built an AI-powered Resume Analyzer that evaluates resumes, analyzes skills, matches job roles, and provides feedback.",
+      "Built an AI-powered Resume Analyzer that evaluates resumes, analyzes skills, matches job roles, and provides intelligent feedback to improve resume quality.",
     tech: ["React", "Java", "Spring Boot", "HTML", "CSS"],
-    github: "YOUR_GITHUB_LINK",
+    github:
+      "https://github.com/priyadharshinim617-maker/AI-Powered-Resume-Analyzer",
+    demo: "https://ai-resume-analyser-frontend-sigma.vercel.app",
   },
+
   {
     title: "Personal Portfolio Website",
     description:
-      "Designed and developed a responsive portfolio website with modern UI, animations, GitHub, LinkedIn and Email integration.",
+      "Designed and developed a modern responsive portfolio with React, Tailwind CSS, Framer Motion animations, GitHub integration, and contact section.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],
-    github: "YOUR_GITHUB_LINK",
+    github:
+      "https://github.com/priyadharshinim617-maker/My-Portfolio",
+    demo: "#",
   },
 ];
 
@@ -61,10 +69,11 @@ function Projects() {
             className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200"
           >
 
-            {/* Project Image */}
+            {/* Header */}
+
             <div className="h-52 bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
 
-              <h2 className="text-white text-3xl font-bold text-center px-5">
+              <h2 className="text-white text-3xl font-bold text-center px-6">
                 {project.title}
               </h2>
 
@@ -82,13 +91,13 @@ function Projects() {
 
               <div className="flex flex-wrap gap-3 mt-6">
 
-                {project.tech.map((tech, i) => (
+                {project.tech.map((item, i) => (
 
                   <span
                     key={i}
                     className="bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-semibold"
                   >
-                    {tech}
+                    {item}
                   </span>
 
                 ))}
@@ -97,16 +106,35 @@ function Projects() {
 
               {/* Buttons */}
 
-              <div className="mt-8">
+              <div className="flex gap-4 mt-8">
 
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center gap-3 bg-purple-600 text-white py-3 rounded-xl hover:bg-purple-700 transition"
+                  className="flex-1 flex items-center justify-center gap-2 bg-gray-900 text-white py-3 rounded-xl hover:bg-black transition duration-300"
                 >
                   <FaGithub />
-                  View on GitHub
+                  GitHub
+                </a>
+
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={(e) => {
+                    if (project.demo === "#") {
+                      e.preventDefault();
+                    }
+                  }}
+                  className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl transition duration-300 ${
+                    project.demo === "#"
+                      ? "bg-purple-400 text-white"
+                      : "bg-purple-600 text-white hover:bg-purple-700"
+                  }`}
+                >
+                  <FaExternalLinkAlt />
+                  Live Demo
                 </a>
 
               </div>
