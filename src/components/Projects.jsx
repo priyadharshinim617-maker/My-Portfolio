@@ -9,7 +9,7 @@ const projects = [
     tech: ["React", "JavaScript", "HTML", "CSS"],
     github:
       "https://github.com/priyadharshinim617-maker/Mobile-Shop-Management-System",
-    demo: "#",
+    demo: "https://mobile-shop-management-system-two.vercel.app/",
   },
 
   {
@@ -29,7 +29,7 @@ const projects = [
     tech: ["React", "Tailwind CSS", "Framer Motion"],
     github:
       "https://github.com/priyadharshinim617-maker/My-Portfolio",
-    demo: "#",
+    demo: "https://my-portfolio-zeta-flax-64.vercel.app/",
   },
 ];
 
