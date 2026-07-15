@@ -1,5 +1,5 @@
 import photo from "../assets/photo_under_1MB.jpg";
-import resume from "../assets/PRIYA M_FullStackDeveloper_Resume (1).pdf";
+import resume from "../assets/PRIYA M_FullStackDeveloper_Resume (1) (3).pdf";
 import { motion } from "framer-motion";
 function Home() {
   return (
